@@ -15,14 +15,10 @@ Reqdata$Datetime <- as.POSIXct(datetime)
 
 ## Generating the Plot 3
 
-#plot(Reqdata$Global_active_power~Reqdata$Datetime, type="l",
-#     ylab="Global Active Power (kilowatts)", xlab="")
-#dev.copy(png, file="plot2.png", height=480, width=480)
-#dev.off()
-
 plot(Reqdata$Datetime,Reqdata$Sub_metering_1, type="l", xlab="", ylab="Energy sub metering")
 lines(Reqdata$Datetime,Reqdata$Sub_metering_2,col="red")
 lines(Reqdata$Datetime,Reqdata$Sub_metering_3,col="blue")
-legend("topright", col=c("black","red","blue"), c("Sub_metering_1  ","Sub_metering_2  ", "Sub_metering_3  "),lty=c(1,1), lwd=c(1,1))
+legend("topright", col=c("black","red","blue"), c("Sub_metering_1  ","Sub_metering_2  ", "Sub_metering_3  "),
+       lty=c(1,1), lwd=c(1,1))
 dev.copy(png, file="plot3.png", width=480, height=480)
 dev.off()

@@ -27,7 +27,8 @@ plot(Reqdata$Datetime,Reqdata$Voltage, type="l", xlab="datetime", ylab="Voltage"
 plot(Reqdata$Datetime,Reqdata$Sub_metering_1, type="l", xlab="", ylab="Energy sub metering")
 lines(Reqdata$Datetime,Reqdata$Sub_metering_2,col="red")
 lines(Reqdata$Datetime,Reqdata$Sub_metering_3,col="blue")
-legend("topright", col=c("black","red","blue"), c("Sub_metering_1  ","Sub_metering_2  ", "Sub_metering_3  "),lty=c(1,1), bty="n", cex=.5) #bty removes the box, cex shrinks the text, spacing added after labels so it renders correctly
+legend('topright', col=c("black","red","blue"), c("Sub_metering_1","Sub_metering_2", "Sub_metering_3"),
+       lty=c(1,1), bty="n", cex=.5) 
 
 #SubPlot 4
 plot(Reqdata$Datetime,Reqdata$Global_reactive_power, type="l", xlab="datetime", ylab="Global_reactive_power")
